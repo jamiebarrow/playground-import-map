@@ -1,0 +1,22 @@
+{
+  "name": "playground-import-map",
+  "version": "1.0.0",
+  "author": "James Barrow",
+  "description": "A playground to try out the import-map feature in Chrome",
+  "keywords": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiebarrow/playground-import-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamiebarrow/playground-import-map/issues"
+  },
+  "homepage": "https://github.com/jamiebarrow/playground-import-map#readme",
+  "scripts": {
+    "start": "nano-server 3000 dist"
+  },
+  "devDependencies": {
+    "nano-server": "^0.5.4"
+  }
+}

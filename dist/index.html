@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground - import-maps - demo</title>
+</head>
+
+<body>
+    <div id="demoApp" style="display: none;" data-bind="style: { 'display': 'block' }">
+        <div>
+            <label for="firstNameInput">First Name</label>
+            <input id="firstNameInput" type="text" data-bind="value: firstName, valueUpdate: 'keyup'" />
+        </div>
+        <div>
+            <label for="lastNameInput">Last Name</label>
+            <input id="lastNameInput" type="text" data-bind="value: lastName, valueUpdate: 'keyup'" />
+        </div>
+        <div>
+            <span data-bind="text: fullName"></span>
+        </div>
+        <div>
+            <button data-bind="click: register, enable: canRegister">Register</button>
+        </div>
+        <div id="log"></div>
+    </div>
+    <script type="importmap">
+    {
+        "imports": {
+            "jquery": "https://unpkg.com/jquery@3.6.0/dist/jquery.min.js",
+            "knockout": "https://unpkg.com/knockout@3.5.1/build/output/knockout-latest.js",
+            "app/": "/app/",
+            "svc/": "/app/services/"
+        }
+    }
+    </script>
+    <script type="module">
+        import { run } from "app/application.js";
+        run();
+    </script>
+</body>
+
+</html>
